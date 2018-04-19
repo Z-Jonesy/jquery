@@ -83,3 +83,31 @@ $(function () {
     });
 
 });
+
+// note: 4. feladat - házi_close
+
+$(function(){
+   let $image = $('.image-wrapper img');
+
+    $image.click(function() {
+
+        let $actualImage = $(this);
+        if (!$actualImage.hasClass('scale-half')) {
+            return;
+        }
+
+        let $previousImage = $('.image-wrapper img:not(.scale-half)');
+
+        // class vaia
+        $previousImage.addClass('scale-half');
+        $actualImage.removeClass('scale-half');
+    })
+
+});
+
+
+
+
+
+
+

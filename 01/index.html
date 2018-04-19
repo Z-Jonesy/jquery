@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+
+    <style>
+    .image-wrapper img {
+      transition: all linear .5s;
+    }
+    .scale-half {
+      transform: scale(.5);
+      transform-origin: bottom;
+    }
+  </style>
 </head>
 
 <body>
@@ -64,6 +74,40 @@
         </div>
         <input type="number" name="" id="percent" value="25" min="0" max="100">
     </div>
+
+
+    <!-- note: 4. feladat - házip_close -->
+    <div class="container">
+        <h1 class="my-2">My team</h1>
+        <div class="d-flex flex-row">
+
+            <div class="image-wrapper d-flex flex-column align-items-center">
+                <img src="assets/user.png" alt="" class="w-100 scale-half">
+                <span class="font-weight-bold">Kiss Pista</span>
+                <span>Webfejlesztő</span>
+            </div>
+             <div class="image-wrapper d-flex flex-column align-items-center">
+                <img src="assets/user.png" alt="" class="w-100 scale-half">
+                <span class="font-weight-bold">Kiss Pista</span>
+                <span>Webfejlesztő</span>
+            </div>
+             <div class="image-wrapper d-flex flex-column align-items-center">
+                <img src="assets/user.png" alt="" class="w-100 scale-half">
+                <span class="font-weight-bold">Kiss Pista</span>
+                <span>Webfejlesztő</span>
+            </div>
+             <div class="image-wrapper d-flex flex-column align-items-center">
+                <img src="assets/user.png" alt="" class="w-100 scale-half">
+                <span class="font-weight-bold">Kiss Pista</span>
+                <span>Webfejlesztő</span>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
 
 
     <!-- Optional JavaScript -->
