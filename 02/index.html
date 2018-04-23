@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,42 +16,51 @@
 
 
     <div class="container">
-        <h1>Regisztráció</h1>
-
+        <h1>Validálás</h1>
+        <!-- Sikertelen alert -->
         <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none">
             <strong>Valami nem OK</strong>
             <ul>
-                <li>hiba1</li>
-                <li>hiba2</li>
+                <!-- ide a script tölti fel az invalidFields tömb tartalmát -->
             </ul>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
 
+        <!-- Regisztrációs form -->
         <form class="mb-2">
-            <!-- felhasználónáv -->
+            <!-- felhasználónév -->
             <div class="form-group">
                 <label for="username">Felhasználónév</label>
-                <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <input type="text" class="form-control" id="username" aria-describedby="Felhasználónév" placeholder="Írd be a felhasználónevet">
             </div>
 
+            <!-- jelszó -->
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Felhasználónév">
-                <small class="form-text text-muted">min 6 karakter</small>
+                <label for="password">Jelszó</label>
+                <input type="password" class="form-control" id="password" placeholder="Jelszó">
+                <small class="form-text text-muted">min 7 karakter legyen</small>
+            </div>
+            <!-- jelszó megerősítése -->
+            <div class="form-group">
+                <label for="passwordAgain">Jelszó megerősítés</label>
+                <input type="password" class="form-control" id="passwordAgain" placeholder="Jelszó">
+                <small class="form-text text-muted">Írd be ismét a jelszavad</small>
             </div>
 
+            <!-- ÁSZF elfogadása kötelező -->
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="aszf">
-                <label class="form-check-label" for="aszf">elfogadom az <a href="#"></a>aszft</label>
+                <label class="form-check-label" for="aszf">Elfogadom az <a href="#">ÁSZF</a>-et</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <!-- submit gomb -->
+            <button type="submit" class="btn btn-primary">Regisztráció</button>
         </form>
 
-        <div id="succesText" style="display: none">Sikeres reg, átirányítunk</div>
-
+        <!-- Sikeres üzenet -->
+        <div id="successText" style="display: none">Sikeres regisztrálás, átirányítunk</div>
     </div>
 
 
@@ -63,4 +73,5 @@
     <script src="scripts01.js"></script>
 
 </body>
+
 </html>
