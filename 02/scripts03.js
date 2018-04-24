@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
 
     // elemek összegyűjtése
     let $progressbar = $('.progress-bar');
@@ -10,18 +10,58 @@ $(function(){
     // progress és kezdeti értékek megadása
     UpdateProgressBar(0);
 
+    // változásokra reagálás
+    $input.keyup(function () {
+        let percent = Math.round(CountFilledInputs() / CountInputs() * 100);
+        UpdateProgressBar(percent);
+
+        if (percent == 100) {
+            $button.prop('disabled', false);
+        } else {
+            $button.prop('disabled', true);
+        }
+    });
+
+    // submitra reagálás
+    $button.click(function (event) {
+        event.preventDefault();
+        // kérdések elrejtése
+        $questionsWrapper.hide();
+        // köszönő szöveg megjelenítésetlocale
+        $thanksWrapper.show();
+
+    });
+
 
 
     // függvények ----------------------------------------- //
     // progress bar beállítása
 
-    function UpdateProgressBar(percent){
+    function UpdateProgressBar(percent) {
         $progressbar.attr('aria-valuenow', percent);
         $progressbar.css('width', percent + '%');
-        $progressbar.text('percent + '%');
+        $progressbar.text(percent + ' % ');
     }
 
     // kitöltött mezők megszámlálása
+    function CountFilledInputs() {
+        let count = 0;
+
+        // összes mezőn végigfutás
+        $input.each(function (index, element) {
+            let $element = $(element);
+            // számláló növelése ha nem üres a mező
+            if ($element.val()) {
+                count++;
+            }
+        });
+        return count;
+    }
+
+    // összes mező megszámlálása
+    function CountInputs() {
+        return $input.length;
+    }
 
 
 });
