@@ -60,7 +60,10 @@ $(function () {
 
     // összes mező megszámlálása
     function CountInputs() {
-        return $input.length;
+        let il = $input.length;
+        console.log(il);
+        return il;
+
     }
 
 
