@@ -1,5 +1,4 @@
 $(function () {
-
     // elemek összegyűjtése
     let $progressbar = $('.progress-bar');
     let $input = $('form input');
@@ -32,8 +31,6 @@ $(function () {
 
     });
 
-
-
     // függvények ----------------------------------------- //
     // progress bar beállítása
 
@@ -63,8 +60,5 @@ $(function () {
         let il = $input.length;
         console.log(il);
         return il;
-
     }
-
-
 });

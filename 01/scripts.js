@@ -10,6 +10,7 @@ $(function () {
         let red = Math.round(max * Math.random(), 0);
         let green = Math.round(max * Math.random(), 0);
         let blue = Math.round(max * Math.random(), 0);
+        console.log(red, green, blue);
 
         // rgb szín beállítása  
         button.css(
@@ -20,6 +21,7 @@ $(function () {
 
         // átlagolás
         let avg = (red + green + blue) / 3;
+        console.log(avg/255);
         if (avg / 255 > 0.5) {
             button.css('color', 'black');
         } else {

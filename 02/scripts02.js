@@ -25,20 +25,13 @@ $(function () {
 
     });
 
-
-
     // függvények ///////////////////////////////////////////////////////
-
     function CreatePost(title, body) {
-
         let postHTML = '<div class="mb-4"><header><strong>' +
             title +
         '</strong></header><main>' +
             body +
         '</main></div>'
-
         $postList.prepend(postHTML);
-
     };
-
 });
