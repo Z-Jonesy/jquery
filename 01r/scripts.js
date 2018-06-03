@@ -64,6 +64,18 @@ $(function () {
 
 // Progress bar
 $(function () {
+    // elemek begyűjtése
+    let $progressbar = $('.progress-bar');
+    let $counter = $('input[type="number"]');
 
+    // console.log($progressbar, $counter);
+
+    $counter.change(function () {
+        let percent = $counter.val();
+
+        $progressbar.text(percent + '%');
+        $progressbar.css('width', percent + '%');
+        $progressbar.attr('aria-valuenow', percent);
+    })
 
 }); // progress bar
